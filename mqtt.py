@@ -1,3 +1,8 @@
+# In fulfillment to the coding challenge sent by Yash Jain.
+# By Sahil Mehta
+# Email: mehtasahil31@gmail.com
+
+
 from clearblade.ClearBladeCore import System
 import random
 import time
@@ -10,10 +15,10 @@ SystemSecret = os.environ.get("SYSTEM_SECRET")
 
 mySystem = System(SystemKey, SystemSecret)
 
-# Log in as Adam
+# Log in as Sahil
 sahil = mySystem.User("mehtasahil31@gmail.com", "sahilmehta")
 
-# Use Adam to access a messaging client
+# Use Sahil to access a messaging client
 mqtt = mySystem.Messaging(sahil)
 
 
@@ -32,7 +37,3 @@ mqtt.on_connect = on_connect
 mqtt.connect()
 time.sleep(30)
 mqtt.disconnect()
-
-
-#export SYSTEM_KEY='a0b1c6ca0b9cdb89d3f9ea82e86a'
-#export SYSTEM_SECRET='A0B1C6CA0BE8F8DFA7ABF198A864'
