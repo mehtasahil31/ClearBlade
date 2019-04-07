@@ -1,4 +1,4 @@
-# In fulfillment to the coding challenge sent by Yash Jain.
+# In fulfillment to the coding challenge sent by ClearBlade (Yash Jain).
 # By Sahil Mehta
 # Email: mehtasahil31@gmail.com
 
