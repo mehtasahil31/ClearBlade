@@ -24,11 +24,8 @@ mqtt = mySystem.Messaging(sahil)
 
 # Set up callback function
 def on_connect(client, userdata, flags, rc):
-    # When we connect to the broker, start publishing our data to the keelhauled channel
-    for i in range(20):
-        payload = "CPU Utilization : " +str(psutil.cpu_percent()) + ", Available Virtual Memory: "+ str(psutil.virtual_memory()[2])
-        client.publish("Test Topic", payload)
-        time.sleep(1)
+    # When we connect to the broker, start publishing our data to the Test Topic channel
+    payload = "CPU Utilization : " +str(psutil.cpu_percent()) + ", Available Virtual Memory: "+ str(psutil.virtual_memory()[2])
 
 # Connect callback to client
 mqtt.on_connect = on_connect
