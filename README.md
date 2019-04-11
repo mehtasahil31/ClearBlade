@@ -1,6 +1,6 @@
 # ClearBlade
 
-## Phase 1
+## Step 1
 
 1. Firstly, I created an account on www.platform.clearblade.com
 2. Selected Add system option and added an Empty system. 
@@ -9,9 +9,9 @@
 5. Then I went in the roles menu and in the Authenticated/Message Topic section, I added a message topic and subscribed to that.
 
 
-## Phase 2
+## Step 2
 
-I installed cClearBlade-Python-SDK
+I installed ClearBlade-Python-SDK
 
 	pip install clearblade
 
@@ -27,5 +27,26 @@ Then I ran the mqtt.py
 	python mqtt.py
 	
 
-#### After this you should get the message (CPU Staus and Memory) on the ClearBlade platform
-	
+After this you should get the message (CPU Staus and Memory) on the ClearBlade platform
+![Messages](./Messages.png)
+
+## Step 3
+
+Now to store the received message in a collection.
+1. I created a collection on ClearBlade Platform and allowed permissions for Authenticated Role.
+2. Then I went to Services and created a code service.
+3. Imported clearblade
+4. The following code will add the message received in the collection.
+
+![Code Service](https://github.com/mehtasahil31/ClearBlade/blob/master/Code%20Service.png?raw=true)
+
+But we needed to the code servide to add the message in the collection for every publish.
+So I created a trigger, such that it will run the code service after every publish.
+
+![Trigger](./Trigger.png)
+
+So when, I run the mqtt.py and it publishes the message on ClearBlade platform, the trigger is activated and the code service runs and the message is added to the collection.
+
+![Collection](./Collection.png)
+
+I hope that answers all the questions. Thank you!
