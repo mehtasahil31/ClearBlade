@@ -28,7 +28,7 @@ Then I ran the mqtt.py
 	
 
 After this you should get the message (CPU Staus and Memory) on the ClearBlade platform
-![Messages](./Message.png)
+![Messages](./Messages.png)
 
 ## Step 3
 
